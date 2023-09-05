@@ -268,7 +268,7 @@ main {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   gap: 1rem;
   justify-content: center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .poke-datos p {
   background-color: #d0d8e5;
