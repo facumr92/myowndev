@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Mitr:wght@500&family=Press+Start+2P&family=Russo+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fondo: #e9dcdc;
+  --primario: #d63d3d;
+  --contraste: #454141;
+  --cabecera: #d6c4c4;
+  -pokemon-card: #ebe2e2;
+  --pokenombre: "Bungee", cursive;
+  --poketipo: "Russo One", sans-serif;
+}
+
+body {
+  display: block;
+  /*background-color: #d63d3d;
+           */
+}
+
+.logo-pokemon {
+  margin-bottom: 1rem;
+}
+
+header {
+  display: flex;
+  padding-block: 1rem;
+  background-color: var(--cabecera);
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  padding-inline: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mensaje-error{
+
+    font-size: 30px;
+    font-family: var(--poketipo);
+    background-color: #d63d3d;
+    color: var(--fondo);
+    text-align: center;
+    margin-bottom: 1rem;
+
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.boton-menu-tipos,
+.tipos {
+  
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 100vmax;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+}
+
+.busqueda{
+    display: flex;
+    max-width: 500px;
+    text-transform: lowercase;
+}
+
+.poke-busqueda{
+
+    cursor: pointer;
+}
+
+.busqueda img{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.boton-menu-tipos:hover {
+  transform: scale(1.1);
+}
+
+.fire {
+  background-color: #d63d3d;
+  color: #e8d151;
+}
+
+.grass {
+  background-color: #58d560;
+  color: var(--contraste);
+}
+
+.water {
+  background-color: #4384e7;
+  color: var(--fondo);
+}
+.rock {
+  background-color: #454141;
+  color: var(--fondo);
+}
+.electric {
+  background-color: #e7e743;
+  color: var(--contraste);
+}
+.ground {
+  background-color: #a77632;
+  color: var(--fondo);
+}
+.ghost {
+  background-color: #8a2a7f;
+  color: #262b33;
+}
+.normal {
+  background-color: #9da8b9;
+  color: var(--contraste);
+}
+.fighting {
+  background-color: #861414;
+  color: var(--fondo);
+}
+.dark {
+  background-color: #262b33;
+  color: var(--fondo);
+}
+.ice {
+  background-color: #377be2;
+}
+.psychic {
+  background-color: #cb6322;
+  color: var(--fondo);
+}
+.dragon {
+  background-color: #9d1ff7;
+  color: var(--fondo);
+}
+.steel {
+  background-color: #656b75;
+  color: var(--cabecera);
+}
+.poison {
+  background-color: #ad51a2;
+  color: var(--cabecera);
+}
+.bug {
+  background-color: #9fa834;
+  color: #e0e4e9;
+}
+.fairy {
+  background-color: #c491be;
+  color: var(--fondo);
+}
+
+.flying {
+  background-color: #a9e3ea;
+  color: #1d2532;
+}
+
+main {
+  margin-top: 1rem;
+}
+
+.container-ppal {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 470px) {
+  .container-ppal {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  .container-ppal {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.poke-card {
+  border-radius: 1rem;
+  background-image: radial-gradient(
+    circle,
+    #a2d9eb,
+    #c0e1f5,
+    #dbe9fa,
+    #f0f3fd,
+    #ffffff
+  );
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.poke-card:hover {
+  transform: scale(1.05);
+  z-index: 4;
+}
+
+.poke-id {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #8a9ab4;
+  text-align: start;
+  padding: 0.3rem;
+}
+
+.poke-nombre {
+  font-family: var(--pokenombre);
+  color: #262b33;
+  font-size: 2rem;
+}
+
+.poke-img {
+  width: 100%;
+  max-width: 6rem;
+}
+.poke-tipo {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  font-family: var(--poketipo);
+  gap: 1rem;
+}
+.poke-tipo p {
+  width: 50%;
+}
+
+.poke-datos {
+  display: flex;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+.poke-datos p {
+  background-color: #d0d8e5;
+  padding: 1rem;
+  border-radius: 100vmax;
+  font-size: large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
